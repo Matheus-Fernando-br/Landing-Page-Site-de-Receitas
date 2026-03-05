@@ -1,0 +1,561 @@
+/* ============================= */
+/* RESET / BASE */
+/* ============================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(180deg,#fff9f8,#fff);
+color:#333;
+}
+
+a{
+text-decoration:none;
+}
+
+section{
+scroll-margin-top:20vh;
+margin-bottom:10vh;
+}
+
+section h2{
+font-size:2rem;
+margin-bottom:2rem;
+}
+
+
+/* ============================= */
+/* HEADER / NAVBAR */
+/* ============================= */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:2rem 6vw;
+background:white;
+box-shadow:0 0.2rem 1rem rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+header h1{
+font-size:1.6rem;
+margin-left:.6rem;
+}
+
+header i{
+font-size:2rem;
+color:#ff6b6b;
+}
+
+.esquerda{
+display:flex;
+align-items:center;
+}
+
+nav{
+z-index:100;
+}
+
+nav ul{
+display:flex;
+gap:4vw;
+list-style:none;
+}
+
+nav a{
+color:#333;
+font-weight:500;
+font-size:.95rem;
+position:relative;
+}
+
+nav a::after{
+content:"";
+width:0;
+height:.2rem;
+background:#ff6b6b;
+position:absolute;
+left:0;
+bottom:-.3rem;
+transition:.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero{
+height:70vh;
+width:100%;
+
+background:
+linear-gradient(rgba(0,0,0,0.4),rgb(0,0,0)),
+url("/Imagens/hero-doce.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+padding:0 8vw;
+
+color:white;
+border-radius:0 0 30px 30px;
+}
+
+.hero-text{
+max-width:40rem;
+animation:fadeUp 1.2s ease;
+}
+
+.hero h2{
+font-size:3rem;
+margin-bottom:1rem;
+}
+
+.hero p{
+font-size:1.1rem;
+margin-bottom:2rem;
+}
+
+.hero button{
+padding:.9rem 2rem;
+border:none;
+border-radius:.4rem;
+background:linear-gradient(45deg,#ff6b6b,#ff9a8b);
+color:white;
+font-size:1rem;
+cursor:pointer;
+transition:.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+box-shadow:0 .5rem 1.5rem rgba(0,0,0,0.2);
+}
+
+
+/* ============================= */
+/* MAIN LAYOUT */
+/* ============================= */
+
+main{
+padding:6vh 8vw;
+}
+
+
+/* ============================= */
+/* RECEITAS (CARDS) */
+/* ============================= */
+
+.receitas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));
+gap:2rem;
+}
+
+article{
+background:white;
+border-radius:.6rem;
+overflow:hidden;
+box-shadow:0 .5rem 1.5rem rgba(0,0,0,0.06);
+transition:.35s;
+animation:fadeUp 1s ease;
+}
+
+article:hover{
+transform:translateY(-.6rem);
+box-shadow:0 1rem 2rem rgba(0,0,0,0.12);
+}
+
+article img{
+width:100%;
+height:12rem;
+object-fit:cover;
+}
+
+article h3{
+margin:1rem;
+font-size:1.2rem;
+}
+
+article p{
+margin:0 1rem 1rem;
+font-size:.95rem;
+color:#666;
+}
+
+article button{
+display:block;
+margin:1rem auto 1.5rem auto;
+padding:.6rem 1.4rem;
+border:none;
+border-radius:.4rem;
+background:linear-gradient(45deg,#ff6b6b,#ff9a8b);
+color:white;
+font-size:.9rem;
+cursor:pointer;
+transition:.3s;
+}
+
+article button:hover{
+transform:scale(1.05);
+}
+
+
+/* ============================= */
+/* NOVIDADES */
+/* ============================= */
+
+#novidades article{
+max-width:28rem;
+}
+
+#novidades .cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:2rem;
+}
+
+
+/* ============================= */
+/* QUEM SOMOS */
+/* ============================= */
+
+#quem-somos{
+margin-top:10vh;
+}
+
+#quem-somos h2{
+text-align:center;
+margin-bottom:4vh;
+}
+
+.sobre-card{
+display:flex;
+align-items:center;
+gap:4vw;
+
+background:white;
+padding:3rem;
+
+border-radius:1rem;
+
+box-shadow:0 1rem 2rem rgba(0,0,0,0.08);
+transition:.4s;
+}
+
+.sobre-card:hover{
+box-shadow:0 1.5rem 3rem rgba(0,0,0,0.18);
+}
+
+.sobre-img img{
+width:32rem;
+height:22rem;
+object-fit:cover;
+
+border-radius:.8rem;
+transition:.4s;
+}
+
+.sobre-img img:hover{
+transform:scale(1.03);
+}
+
+.sobre-texto{
+max-width:40rem;
+}
+
+.sobre-texto h3{
+font-size:1.5rem;
+margin-bottom:1rem;
+color:#ff6b6b;
+}
+
+.sobre-texto p{
+margin-bottom:1rem;
+line-height:1.6rem;
+color:#555;
+font-size:.95rem;
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer{
+background:linear-gradient(180deg,#111,#1b1b1b);
+color:white;
+padding:7vh 6vw;
+
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+
+gap:4rem;
+}
+
+.footer-contato{
+max-width:450px;
+}
+
+.footer-contato h2{
+font-size:1.8rem;
+margin-bottom:1rem;
+}
+
+.footer-contato p{
+color:#cfcfcf;
+line-height:1.6;
+margin-bottom:1.5rem;
+}
+
+
+/* BOTÃO WHATSAPP */
+
+.btn-whatsapp{
+background:#25d366;
+border:none;
+
+padding:.8rem 1.4rem;
+border-radius:8px;
+
+font-size:1.2rem;
+
+cursor:pointer;
+
+color:white;
+
+display:flex;
+align-items:center;
+gap:.5rem;
+
+transition:.3s;
+}
+
+.btn-whatsapp:hover{
+background:#0d7035;
+transform:translateY(-2px);
+box-shadow:0 0 20px 1px #ffffff28;
+}
+
+
+/* REDES SOCIAIS */
+
+.footer-redes{
+text-align:center;
+}
+
+.footer-redes h3{
+margin-bottom:1rem;
+}
+
+.redes{
+display:flex;
+flex-direction:column;
+
+align-items:center;
+
+gap:1.5rem;
+margin-top:1rem;
+}
+
+.card{
+width:3.2rem;
+height:3.2rem;
+
+background:#222;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+
+transition:.5s;
+}
+
+.card i{
+font-size:1.2rem;
+color:white;
+}
+
+.card:hover{
+transform:scale(1.15);
+background:#ff6b6b;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom{
+width:100%;
+border-top:1px solid #2b2b2b;
+
+padding-top:1rem;
+
+text-align:center;
+font-size:.9rem;
+
+color:#9c9c9c;
+}
+
+
+/* ============================= */
+/* ANIMAÇÕES */
+/* ============================= */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(2rem);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+
+@media (max-width:768px){
+
+.hero{
+height:60vh;
+padding:0 6vw;
+}
+
+.hero h2{
+font-size:2rem;
+}
+
+.hero p{
+font-size:.95rem;
+}
+
+#novidades .cards{
+grid-template-columns:1fr;
+}
+
+.sobre-card{
+flex-direction:column;
+text-align:center;
+}
+
+.sobre-img img{
+width:80%;
+height:auto;
+}
+
+footer{
+flex-direction:column;
+gap:2.5rem;
+}
+
+.footer-contato{
+max-width:100%;
+}
+
+}
+
+
+/* ============================= */
+/* MENU MOBILE */
+/* ============================= */
+
+.menu-mobile{
+display:none;
+font-size:2rem;
+cursor:pointer;
+}
+
+#menu-close{
+display:none;
+}
+
+@media(max-width:768px){
+
+.menu-mobile{
+display:block;
+}
+
+nav{
+position:absolute;
+top:100%;
+left:0;
+
+width:100%;
+
+background:white;
+
+max-height:0;
+overflow:hidden;
+
+transition:.4s;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+nav ul{
+flex-direction:column;
+padding:2rem;
+gap:1.5rem;
+}
+
+nav.active{
+max-height:400px;
+}
+
+}
+
+
+/* ============================= */
+/* OVERLAY */
+/* ============================= */
+
+.overlay{
+position:fixed;
+
+top:0;
+left:0;
+
+width:100vw;
+height:100vh;
+
+background:rgba(0,0,0,.61);
+
+opacity:0;
+visibility:hidden;
+
+transition:.3s;
+
+z-index:90;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
+}
