@@ -59,7 +59,23 @@ color:#ff6b6b;
 .esquerda{
 display:flex;
 align-items:center;
+transition: all .3s ease;
+cursor: pointer;
 }
+
+.esquerda:hover {
+    transform: translateY(2px);
+}
+
+.esquerda:active {
+    transform: scale(0.96);
+}
+
+.direita {
+display:flex;
+align-items:center;
+}
+
 
 nav{
 z-index:100;
@@ -79,37 +95,48 @@ position:relative;
 }
 
 nav a::after{
-content:"";
-width:0;
-height:.2rem;
-background:#ff6b6b;
-position:absolute;
-left:0;
-bottom:-.3rem;
-transition:.3s;
+    content:"";
+    width:0;
+    height:.2rem;
+    background:#ff6b6b;
+    position:absolute;
+    left:0;
+    bottom:-.3rem;
+    transition:.3s;
 }
 
 nav a:hover::after{
-width:100%;
+    width:100%;
 }
 
+nav li {
+    transition: transform .3s ease;
+}
+
+nav li:hover {
+    transform: translateY(5px);
+}
+
+nav li:active {
+    transform: scale(0.96);
+}
 
 /* ============================= */
 /* HERO */
 /* ============================= */
 
 .hero{
-height:70vh;
-width:100%;
-
-background:
-linear-gradient(rgba(0,0,0,0.4),rgb(0,0,0)),
-url("/Imagens/hero-doce.jpg");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
+    height:70vh;
+    width:100%;
+    
+    background:
+    linear-gradient(rgba(0,0,0,0.4),rgb(0,0,0)),
+    url("/Imagens/hero-doce.jpg");
+    
+    background-size:cover;
+    background-position:center;
+    
+    display:flex;
 align-items:center;
 padding:0 8vw;
 

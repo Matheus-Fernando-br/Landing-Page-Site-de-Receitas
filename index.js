@@ -41,3 +41,12 @@ link.addEventListener("click",()=>{
 fecharMenu()
 })
 })
+
+const logoTopo = document.getElementById("logo-topo");
+
+logoTopo.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
